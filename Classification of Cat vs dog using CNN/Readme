@@ -1,0 +1,58 @@
+__Project Overview__
+This project implements a Convolutional Neural Network (CNN) for binary image classification to distinguish between cats and dogs. It includes:
+The project focuses on building a Convolutional Neural Network (CNN) and leveraging Transfer Learning with the VGG16 model to classify images of cats and dogs. 
+The model is trained on a dataset of 100x100 RGB images and evaluated for accuracy.
+
+A custom CNN model trained from scratch.
+A pre-trained VGG16 model with fine-tuning for better accuracy.
+Performance evaluation using accuracy and classification metrics.
+Visualization of random predictions.
+
+## Introduction
+The goal of this project is to classify images as either cats or dogs using deep learning techniques. The project involves:
+1. Building a CNN from scratch.
+2. Using Transfer Learning with the VGG16 model.
+3. Evaluating the models performance on a test dataset.
+
+# Dataset
+The dataset consists of two classes:
+- Cats
+- Dogs
+
+The images are resized to 100x100 pixels with 3 color channels (RGB). The dataset is split into training and testing sets:
+- input.csv and labels.csv for training.
+- input_test.csv and labels_test.csv for testing.
+
+Model Architecture
+The custom CNN model consists of:
+1. Three convolutional blocks with MaxPooling layers.
+2. Fully connected layers with ReLU activation.
+3. A final sigmoid activation for binary classification.
+
+### Transfer Learning with VGG16
+The VGG16 model is used as a base model with the following modifications:
+1. The top layers of VGG16 are frozen.
+2. A Global Average Pooling layer and two Dense layers are added on top.
+3. The last four layers of VGG16 are unfrozen for fine-tuning.
+
+## Training
+The model is trained using:
+- Optimizer: Adam with a learning rate of 0.0001.
+- Loss Function: Binary Crossentropy.
+- Batch Size: 64 for the custom CNN and 32 for VGG16.
+- Epochs: 5 for both models.
+
+## Evaluation
+The models performance is evaluated using:
+- Test Accuracy: Accuracy on the test dataset.
+- Classification Report: Precision, Recall, and F1-Score for each class.
+
+## Resultsf
+- Custom CNN: Achieved a test accuracy of 90%.
+- VGG16 Transfer Learning: Achieved a test accuracy of 90.25%.
+
+## Future Improvements
+- Experiment with data augmentation
+- Use different architectures (ResNet, MobileNet, etc.)
+- Tune hyperparameters for better performance
+- Can be Optimized for more accuracy
