@@ -23,8 +23,7 @@ The images are resized to 100x100 pixels with 3 color channels (RGB). The datase
 - input.csv and labels.csv for training.
 - input_test.csv and labels_test.csv for testing.
 
-## Model Architecture
-### CNN from Scratch
+Model Architecture
 The custom CNN model consists of:
 1. Three convolutional blocks with MaxPooling layers.
 2. Fully connected layers with ReLU activation.
@@ -53,7 +52,7 @@ The models performance is evaluated using:
 - VGG16 Transfer Learning: Achieved a test accuracy of 90.25%.
 
 ## Future Improvements
-Experiment with data augmentation
-Use different architectures (ResNet, MobileNet, etc.)
-Tune hyperparameters for better performance
-Can be Optimized for more accuracy
+- Experiment with data augmentation
+- Use different architectures (ResNet, MobileNet, etc.)
+- Tune hyperparameters for better performance
+- Can be Optimized for more accuracy
